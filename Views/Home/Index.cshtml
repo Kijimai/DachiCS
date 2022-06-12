@@ -1,8 +1,23 @@
-﻿@{
+﻿@model Dojodachi
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome to DojoDachi!</h1>
-    
+    <p>@Model.Energy</p>
+
+    <form asp-action="Feed" asp-controller="Home" method="POST">
+        <button>Feed</button>
+    </form>
+    <form asp-action="Play" asp-controller="Home" method="POST">
+        <button>Play</button>
+    </form>
+    <form asp-action="Work" asp-controller="Home" method="POST">
+        <button>Work</button>
+    </form>
+    <form asp-action="Sleep" asp-controller="Home" method="POST">
+        <button>Sleep</button>
+    </form>
 </div>

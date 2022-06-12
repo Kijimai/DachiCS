@@ -9,6 +9,10 @@ public class HomeController : Controller
 {
     [HttpGet("")]
     public IActionResult Index() {
+        // if(HttpContext.Session.GetString("MyPet") == null) {
+        //     HttpContext.Session.SetString("MyPet", "");
+        // }
+
         Dojodachi myPet =  new Dojodachi() {
             Happiness = 20,
             Fullness = 20,
@@ -16,6 +20,8 @@ public class HomeController : Controller
             Meals = 3
         };
 
-        return View("Index");
+        
+
+        return View("Index", myPet);
     }
 }
