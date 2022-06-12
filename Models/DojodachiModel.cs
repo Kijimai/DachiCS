@@ -1,7 +1,8 @@
 namespace DojoDachi.Models;
 
 public class Dojodachi {
-    public int happiness {get; set;}
-    public int fullness {get; set;}
-    public int energy {get;set;}
+    public int Happiness {get; set;}
+    public int Fullness {get; set;}
+    public int Energy {get;set;}
+    public int Meals {get; set;}
 }
